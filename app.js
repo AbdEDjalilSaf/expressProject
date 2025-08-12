@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import clientRoutes from "./routes/clientRoutes";
+import clientRoutes from "@/routes/clientRoutes";
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 
