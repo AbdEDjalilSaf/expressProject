@@ -1,5 +1,5 @@
 import express from 'express';
-import { protect } from '../middleware/authMiddleware';
+// import { protect } from '../middleware/authMiddleware';
 
 
 import * as clientController from '../controller/clientController'
