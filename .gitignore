@@ -60,7 +60,7 @@ Thumbs.db
 
 # Gatsby files
 .cache/
-public/
+
 
 # Svelte files
 __sapper__/
