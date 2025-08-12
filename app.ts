@@ -66,18 +66,18 @@ app.use(express.json());
 // cookie parser configuration
 
 
-// interface User {
-//     id: string;
-//     name: string;
-//     email: string;
-//     password: string;
-//     roles: string[];
-//     refreshToken: string[];
-// }
+interface User {
+    id: string;
+    name: string;
+    email: string;
+    password: string;
+    roles: string[];
+    refreshToken: string[];
+}
 
 
 
-app.get("/",(req, res) => {  
+app.get("/",(req: Request, res: Response) => {  
 
   // req.sessionStore.get(req.session.id,(err,SessionData)=>{
   //   if(err){
@@ -106,7 +106,7 @@ app.listen(PORT, () => {
 
 
 // , passportConfig.authenticate('local')
-app.post("/api/auth", async (req, res) => {
+app.post("/api/auth", async (req: Request, res: Response): Promise<void> => {
   const cookies = req.cookies;
 
   const { email, password } = req.body;
