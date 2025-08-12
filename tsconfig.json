@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "typeRoots": ["./node_modules/@types", "./types"],
+      "target": "es6",
+      "module": "commonjs",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "types": ["node", "express"]
+    },
+    
+    "include": ["src/**/*", "types/**/*"]
+  }

@@ -1,0 +1,20 @@
+services:
+  - name: express
+    type: web
+    env: node
+    buildCommand: npm install
+    startCommand: node app.ts
+    envVars:
+      - key: PGUSER
+        value: postgres 
+      - key: PGHOST
+        value: localhost
+      - key: PGDATABASE
+        value: postgres 
+      - key: PGPASSWORD
+        value: toot
+      - key: PGPORT
+        value: "5432"
+      - key: PGSSL
+        value: "false"
+        
