@@ -3,11 +3,11 @@ services:
     type: web
     env: node
     buildCommand: npm install
-    startCommand: node app.ts
+    startCommand: node app.js
     envVars:
       - key: PGUSER
         value: postgres 
-      - key: PGHOST
+      - key: PGHOST 
         value: localhost
       - key: PGDATABASE
         value: postgres 

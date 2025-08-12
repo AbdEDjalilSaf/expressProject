@@ -2,10 +2,10 @@
   "name": "express",
   "version": "1.0.0",
   "description": "",
-  "main": "app.ts",
+  "main": "app.js",
   "scripts": {
-    "start": "node app.ts",
-    "dev": "nodemon app.ts",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "build": "tsc",
     "test": "jest"
   },

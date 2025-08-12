@@ -1,9 +1,11 @@
-import express, { Request, Response } from "express";
+import express from "express";
+import cors from "cors";
 import clientRoutes from "./routes/clientRoutes";
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 
 const app = express();
+app.use(cors());
 app.use(clientRoutes);
 const PORT = 5000;
 
@@ -25,6 +27,7 @@ const options = {
   },
   apis: ['./routes/*.js'], // مسار ملفات التوجيهات
 };
+
 
 const specs = swaggerJsdoc(options);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
@@ -66,18 +69,18 @@ app.use(express.json());
 // cookie parser configuration
 
 
-interface User {
-    id: string;
-    name: string;
-    email: string;
-    password: string;
-    roles: string[];
-    refreshToken: string[];
-}
+// interface User {
+//     id: string;
+//     name: string;
+//     email: string;
+//     password: string;
+//     roles: string[];
+//     refreshToken: string[];
+// }
 
 
 
-app.get("/",(req: Request, res: Response) => {  
+app.get("/",(req, res) => {  
 
   // req.sessionStore.get(req.session.id,(err,SessionData)=>{
   //   if(err){
@@ -106,7 +109,7 @@ app.listen(PORT, () => {
 
 
 // , passportConfig.authenticate('local')
-app.post("/api/auth", async (req: Request, res: Response): Promise<void> => {
+app.post("/api/auth", async (req, res) => {
   const cookies = req.cookies;
 
   const { email, password } = req.body;
