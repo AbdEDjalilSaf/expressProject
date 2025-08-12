@@ -12,7 +12,7 @@ const db = new pg.Client({
     port: Number(process.env.PG_PORT),  // 5432
     // ssl: {
     //   rejectUnauthorized: false
-    // }
+    // } 
   });
 db.connect();
 
