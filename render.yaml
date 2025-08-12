@@ -15,6 +15,3 @@ services:
         value: toot
       - key: PGPORT
         value: "5432"
-      - key: PGSSL
-        value: "false"
-        
